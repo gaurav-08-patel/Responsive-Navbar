@@ -5,9 +5,18 @@ let closeToggle= document.querySelector(".material-symbols-outlined");
 
 navToggle.addEventListener("click",()=>{
     sideBar.style.display="flex";
+    sideBar.style.animation="1s ease-in-out  slidein";
 })
 
 closeToggle.addEventListener("click",()=>{
-    sideBar.style.display="none";
+    const animationDuration = 1000;
+    
+    sideBar.style.animation="1s ease-in-out  slideout";
+    setTimeout(()=>{
+        sideBar.style.display="none";
+    },animationDuration );
+    
+    
+    
 })
 
